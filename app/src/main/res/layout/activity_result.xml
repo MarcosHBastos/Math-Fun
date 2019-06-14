@@ -3,7 +3,8 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/pika">
 
     <TextView
             android:layout_width="wrap_content"
@@ -33,6 +34,7 @@
             android:layout_marginTop="50dp"
             android:onClick="main"
             android:text="Voltar ao Menu"
+            android:background="#ffcc00"
             android:textColor="@android:color/black"
             android:textSize="25dp"/>
 
