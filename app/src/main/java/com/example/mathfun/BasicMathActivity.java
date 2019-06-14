@@ -37,8 +37,8 @@ public class BasicMathActivity extends AppCompatActivity {
     public void questionBuilder() {
         title.setText("Questão " + (round + 1) + " de 5:");
         answer.setText("");
-        a = Utils.random(10);
         b = Utils.random(10);
+        a = Utils.randomBiggerThan(b);
         opt = Utils.random(2);
         String operator = (opt == 0) ? " + " : " - ";
         correct = (opt == 0) ? a + b : a - b;

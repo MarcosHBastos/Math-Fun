@@ -51,6 +51,14 @@ public class Utils {
         return r.nextInt(bound);
     }
 
+    public static int randomBiggerThan(int num) {
+        int n = 0;
+        do {
+            n = random(10);
+        } while (n < num);
+        return n;
+    }
+
     private static boolean exists(int[] array, int n) {
         for (int i = 0; i < array.length; i++) {
             if (array[i] == n) {

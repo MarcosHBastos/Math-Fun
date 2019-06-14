@@ -13,18 +13,18 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="140dp"
+            android:layout_marginTop="20dp"
             android:textColor="@android:color/black"
             android:textSize="25dp"
             android:textStyle="bold"
             android:text="Selecione um dos jogos :)" android:fontFamily="sans-serif-thin"/>
 
     <Button
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_above="@id/btn"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="21dp"
+            android:layout_margin="20dp"
             android:textColor="@android:color/black"
             android:onClick="count"
             android:background="#ffcc00"
@@ -32,18 +32,19 @@
 
     <Button
             android:id="@+id/btn"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="20dp"
             android:textColor="@android:color/black"
             android:onClick="basicMath"
             android:background="#ffcc00"
             android:text="Artimética Básica" android:layout_centerInParent="true"/>
 
     <Button
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/btn"
-            android:layout_marginTop="20dp"
+            android:layout_margin="20dp"
             android:layout_centerHorizontal="true"
             android:textColor="@android:color/black"
             android:onClick="biggest"
