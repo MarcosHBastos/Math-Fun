@@ -5,37 +5,39 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".MainActivity"
+        android:background="@drawable/pika">
 
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="140dp"
             android:textColor="@android:color/black"
             android:textSize="25dp"
-            android:text="Selecione um dos jogos :)" />
+            android:textStyle="bold"
+            android:text="Selecione um dos jogos :)" android:fontFamily="sans-serif-thin"/>
 
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_above="@id/btn"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="21dp"
             android:textColor="@android:color/black"
             android:onClick="count"
+            android:background="#ffcc00"
             android:text="Contar Pokémons"/>
 
     <Button
             android:id="@+id/btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
             android:textColor="@android:color/black"
             android:onClick="basicMath"
-            android:text="Artimética Básica"/>
+            android:background="#ffcc00"
+            android:text="Artimética Básica" android:layout_centerInParent="true"/>
 
     <Button
             android:layout_width="wrap_content"
@@ -45,6 +47,7 @@
             android:layout_centerHorizontal="true"
             android:textColor="@android:color/black"
             android:onClick="biggest"
+            android:background="#ffcc00"
             android:text="Maior Número Possível"/>
 
    </RelativeLayout>
