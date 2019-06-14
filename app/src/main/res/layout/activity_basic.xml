@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".BasicMathActivity">
+
+    <TextView
+            android:id="@+id/tll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_margin="30dp"
+            android:text="Questão 1 de 5:"
+            android:textColor="@android:color/black"
+            android:layout_centerHorizontal="true"
+            android:textSize="25dp"/>
+
+    <TextView
+            android:id="@+id/sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tll"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:text="1 + 1 = ?"
+            android:textColor="@android:color/black"
+            android:textSize="30dp"/>
+
+    <EditText
+            android:id="@+id/rsp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sub"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:inputType="number"
+            android:maxLength="3"
+            android:hint="Resultado:"/>
+
+    <Button
+            android:id="@id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rsp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:textColor="@android:color/black"
+            android:onClick="check"
+            android:text="Responder!"/>
+
+    <TextView
+            android:id="@+id/hits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn"
+            android:layout_marginTop="120dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
+            android:text="acertos"/>
+
+</RelativeLayout>
