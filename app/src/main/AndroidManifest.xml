@@ -18,5 +18,6 @@
         <activity android:name=".CountActivity"/>
         <activity android:name=".BasicMathActivity"/>
         <activity android:name=".BiggestActivity"/>
+        <activity android:name=".ResultActivity"/>
     </application>
 </manifest>

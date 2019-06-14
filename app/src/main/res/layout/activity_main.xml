@@ -25,7 +25,7 @@
             android:layout_marginBottom="20dp"
             android:textColor="@android:color/black"
             android:onClick="count"
-            android:text="Contagem"/>
+            android:text="Contar Pokémons"/>
 
     <Button
             android:id="@+id/btn"
@@ -45,6 +45,6 @@
             android:layout_centerHorizontal="true"
             android:textColor="@android:color/black"
             android:onClick="biggest"
-            android:text="Maior Número"/>
+            android:text="Maior Número Possível"/>
 
    </RelativeLayout>

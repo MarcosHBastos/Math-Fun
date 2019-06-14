@@ -43,6 +43,7 @@ public class BiggestActivity extends AppCompatActivity {
 
     public void questionBuilder() {
         title.setText("Questão " + (round + 1) + " de 5:");
+        answer.setText("");
         numbers = new ArrayList<>();
         numbers.add(Utils.random(10));
         numbers.add(Utils.random(10));
@@ -59,11 +60,17 @@ public class BiggestActivity extends AppCompatActivity {
             Toast.makeText(this, "Informe sua resposta", Toast.LENGTH_SHORT).show();
         } else {
             int parsedAnswer = Integer.parseInt(a);
+            String call = "";
+            String shoutout = "";
             if (parsedAnswer == correct) {
-                Utils.popAlertDialog("Acertou!", "Sua resposta está correta, parabéns!", this);
+                call = "Acertou!";
+                shoutout = "Sua resposta está correta, parabéns!";
+                Utils.popAlertDialog(call, shoutout, this);
                 hits++;
             } else {
-                Utils.popAlertDialog("Errou :(", "A resposta correta seria: " + correct, this);
+                call = "Errou :(";
+                shoutout = "A resposta correta seria: " + correct;
+                Utils.popAlertDialog(call, shoutout, this);
             }
             round++;
             if (round != 5) {
@@ -71,6 +78,8 @@ public class BiggestActivity extends AppCompatActivity {
             } else {
                 Intent it = new Intent(this, ResultActivity.class);
                 it.putExtra("hits", (hits * 20));
+                it.putExtra("call", call);
+                it.putExtra("shoutout", shoutout);
                 startActivity(it);
                 finish();
             }

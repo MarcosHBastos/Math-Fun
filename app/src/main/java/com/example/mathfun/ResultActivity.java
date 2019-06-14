@@ -17,6 +17,7 @@ public class ResultActivity extends AppCompatActivity {
 
         Intent it = getIntent();
         result = findViewById(R.id.res);
+        Utils.popAlertDialog(it.getExtras().getString("call"),it.getExtras().getString("shoutout"),this);
         result.setText("Você acertou um total de "+it.getExtras().get("hits")+ "% das questões");
     }
 

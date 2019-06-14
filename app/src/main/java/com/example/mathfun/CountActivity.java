@@ -68,16 +68,26 @@ public class CountActivity extends AppCompatActivity {
 
     public void checkAnswer(int shot) {
         int correct = (indexes[round] + 1);
+        String call = "";
+        String shoutout = "";
         if (shot == correct) {
-            Utils.popAlertDialog("Acertou!", "Sua resposta está correta, parabéns!", this);
+            call = "Acertou!";
+            shoutout = "Sua resposta está correta, parabéns!";
+            Utils.popAlertDialog(call, shoutout, this);
             hits++;
         } else {
-            Utils.popAlertDialog("Errou :(", "A resposta correta seria: " + correct, this);
+            call = "Errou :(";
+            shoutout = "A resposta correta seria: " + correct;
+            Utils.popAlertDialog(call, shoutout, this);
         }
         round++;
-        if (round == 5) {
+        if (round != 5) {
+            questionBuilder();
+        } else {
             Intent it = new Intent(this, ResultActivity.class);
             it.putExtra("hits", (hits * 20));
+            it.putExtra("call", call);
+            it.putExtra("shoutout", shoutout);
             startActivity(it);
             finish();
         }
